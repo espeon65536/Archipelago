@@ -1,8 +1,18 @@
+import os
+
+from .Location import build_locations
+
+from BaseClasses import Region, RegionType, Entrance
 from ..AutoWorld import World, WebWorld
+
+
+submodule: str = 'MLSSRandomizer'
+
 
 class MLSSWebWorld(WebWorld):
     # TODO: Add setup tutorials
     pass
+
 
 class MLSSWorld(World):
     """TODO: Add game description here"""
@@ -15,8 +25,14 @@ class MLSSWorld(World):
         pass
 
     def create_regions(self) -> None:
+        # Setup standard AP regions
+        menu_region = Region('Menu', RegionType.Generic, '', self.player, self.multiworld)
+        main_region = Region('Beanbean Kingdom', RegionType.Generic, '', self.player, self.multiworld)
+        entr = Entrance(self.player, 'New Game', menu_region)
+        entr.connect(main_region)
+
         # Load locations from submodule files
-        pass
+        build_locations(main_region, submodule)
 
     def create_items(self) -> None:
         # Load items from submodule files
