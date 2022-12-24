@@ -1,0 +1,3 @@
+[submodule "worlds/mlss/MLSSRandomizer"]
+	path = worlds/mlss/MLSSRandomizer
+	url = https://github.com/jamesbrq/MLSSRandomizer.git
