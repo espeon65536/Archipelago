@@ -1,6 +1,6 @@
 import os
 
-from .Location import build_locations
+from .Location import build_locations, make_location_name_to_id
 
 from BaseClasses import Region, RegionType, Entrance
 from ..AutoWorld import World, WebWorld
@@ -19,6 +19,9 @@ class MLSSWorld(World):
     game: str = 'Mario & Luigi: Superstar Saga'
     web = MLSSWebWorld()
 
+    location_name_to_id = make_location_name_to_id(submodule)
+    # item_name_to_id = make_item_name_to_id()
+
     @classmethod
     def assert_generate(cls) -> None:
         # TODO: Add check for MLSS ROM
@@ -33,6 +36,8 @@ class MLSSWorld(World):
 
         # Load locations from submodule files
         build_locations(main_region, submodule)
+
+        # TODO: Set completion condition?
 
     def create_items(self) -> None:
         # Load items from submodule files
