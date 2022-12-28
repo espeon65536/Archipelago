@@ -1,0 +1,181 @@
+0xA - Mushroom
+0xB - Super Mushroom
+0xC - Ultra Mushroom
+0xD - Max Mushroom
+0xE - Nut
+0xF - Super Nut
+0x10 - Ultra Nut
+0x11 - Max Nut
+0x12 - Syrup
+0x13 - Super Syrup
+0x14 - Ultra Syrup
+0x15 - Max Syrup
+0x16 - 1-UP Mushroom
+0x17 - 1-UP Super
+0x18 - Golden Mushroom
+0x19 - Refreshing Herb
+0x1A - Red Pepper
+0x1B - Green Pepper
+0x1C - Woo Bean
+0x1D - Hoo Bean
+0x1E - Chuckle Bean
+0x1F - Hee Bean
+0x20 - Woohoo Blend
+0x21 - Hoohoo Blend
+0x22 - Chuckle Blend
+0x23 - Teehee Blend
+0x24 - Hoolumbian
+0x25 - Chuckociino
+0x26 - Teeheespresso
+0x30 - Beanbean Map
+0x31 - Peasley's Rose
+0x32 - Beanbean Brooch
+0x33 - Red Goblet
+0x34 - Green Goblet
+0x35 - Red Chuckola Fruit
+0x36 - White Chukola Fruit
+0x37 - Purple Chuckola Fruit
+0x38 - Hammers
+0x39 - Firebrand
+0x3A - Thunder Hand
+0x40 - Membership Card
+0x41 - Winkle Card
+0x42 - Peach's Extra Dress
+0x43 - Fake Beanstar
+0x44 - Crabbie Grass
+0x45 - Red Pearl Bean
+0x46 - Green Pearl Bean
+0x47 - Bean Fruit 1
+0x50 - Bean Fruit 2
+0x51 - Bean Fruit 3
+0x52 - Bean Fruit 4
+0x53 - Bean Fruit 5
+0x54 - Bean Fruit 6
+0x55 - Bean Fruit 7
+0x56 - Blue Neon Egg
+0x57 - Red Neon Egg
+0x60 - Green Neon Egg
+0x61 - Yellow Neon Egg
+0x62 - Purple Neon Egg
+0x63 - Orange Neon Egg
+0x64 - Azure Neon Egg
+0x65 - Beanstar Piece 1
+0x66 - Beanstar Piece 2
+0x67 - Beanstar Piece 3
+0x70 - Beanstar Piece 4
+0x71 - Beanstar
+0x72 - Spangle
+0x73 - Beanlet 1
+0x74 - Beanlet 2
+0x75 - Beanlet 3
+0x76 - Beanlet 4
+0x77 - Beanlet 5
+0x80 - Beanstone 1
+0x81 - Beanstone 2
+0x82 - Beanstone 3
+0x83 - Beanstone 4
+0x84 - Beanstone 5
+0x85 - Beanstone 6
+0x86 - Beanstone 7
+0x87 - Beanstone 8
+0x90 - Beanstone 9
+0x91 - Beanstone 10
+0x92 - Secret Scroll 1
+0x93 - Secret Scroll 2
+0x9E - Bean Badge
+0x9F - Castle Badge
+0xA0 - Pea Badge
+0xA1 - Bean B. Badge
+0xA2 - Counter Badge
+0xA3 - Charity Badge
+0xA4 - Bros. Badge
+0xA5 - Miracle Badge
+0xA6 - Ohoracle Badge
+0xA7 - Mush Badge
+0xA8 - Mari-Lui Badge
+0xA9 - Muscle Badge
+0xAA - Spiny Badge AA
+0xAB - Mush Badge A
+0xAC - Grab Badge
+0xAD - Mush Badge AA
+0xAE - Power Badge
+0xAF - Wonder Badge
+0xB0 - Beauty Badge
+0xB1 - Salvage Badge
+0xB2 - Oh-Pah Badge
+0xB3 - Brilliant Badge
+0xB4 - Sarge Badge
+0xB5 - General Badge
+0xB6 - Tank Badge
+0xB7 - School Emblem
+0xB8 - Steady Badge
+0xB9 - Oho Jee Symbol
+0xBA - Spiny Badge A
+0xBB - Bros. Life
+0xBC - Piranha Swing
+0xBD - Bros. Rock
+0xBE - Lucky Ribbon
+0xBF - Mush Badge A (Stronger Version)
+0xC0 - Soulful Bros
+0xC1 - High-End Badge
+0xC2 - Hand Aura
+0xC3 - Sledge Heart
+0xC4 - Lucky Bros.
+0xC5 - Bros. Respect
+0xC6 - Bowser Fist
+0xC7 - Bowser Fang
+0xC8 - Spike Badge
+0xC9 - Chuckola Badge
+0xCA - Work Pants
+0xCB - Work Jeans
+0xCC - Bean Pants
+0xCD - Bean Trousers
+0xCE - Blue Jeans
+0xCF - Parasol Pants
+0xD0 - Hard Pants
+0xD1 - Heart Jeans
+0xD2 - Plaid Trousers
+0xD3 - #1 Trousers
+0xD4 - Safety Pants
+0xD5 - Shroom Bells
+0xD6 - Shroom Slacks
+0xD7 - Shroom Slacks
+0xD8 - Peachy Jeans
+0xD9 - Mushwin Pants
+0xDA - Mushluck Pants
+0xDB - Scandal Jeans
+0xDC - Street Jeans
+0xDD - Tropic Slacks
+0xDE - Hermetic Pants
+0xDF - Beanstar Pants
+0xE0 - Peasley Slacks
+0xE1 - Queen B. Jeans
+0xE2 - B. Brand Jeans
+0xE3 - Heart Slacks
+0xE4 - Casual Slacks
+0xE5 - Bubble's Gear
+0xE6 - Chuckola Pants
+0xE7 - Smart Pants
+0xE8 - School Slacks
+0xE9 - Oho Jee Wear
+0xEA - Oho Gear
+0xEB - Casual Coral
+0xEC - Piranha Suit
+0xED - Anuboo Jeans
+0xEE - Ancient Pants
+0xEF - Heavy Slacks
+0xF0 - Light Slacks
+0xF1 - Harhall's Jeans
+0xF2 - Jeanie Jeans
+0xF3 - Wool Trousers
+0xF4 - Random Slacks
+0xF5 - Jeaniest Jeans
+0xF6 - Safe Guard
+0xF7 - Iron Pants
+0xF8 - Greed Wallet
+0xF9 - Bonus Ring
+0xFA - Excite Spring
+0xFB - Great Force
+0xFC - Power Grip
+0xFD - Cobalt Necktie
+0xFE - Gameboy Horror SP

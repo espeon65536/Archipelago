@@ -20,7 +20,7 @@ class MLSSWorld(World):
     web = MLSSWebWorld()
 
     location_name_to_id = make_location_name_to_id(submodule)
-    # item_name_to_id = make_item_name_to_id()
+    item_name_to_id = make_item_name_to_id()
 
     @classmethod
     def assert_generate(cls) -> None:

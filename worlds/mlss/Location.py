@@ -4,9 +4,7 @@ from functools import lru_cache
 from typing import List, Optional
 
 from BaseClasses import Region, Location
-
-# TODO: find a suitable ID offset
-id_offset = 0
+from .Utils import id_offset, get_submodule_file
 
 
 class MLSSLocationType(IntEnum):
@@ -51,24 +49,24 @@ def add_location(region: Region, data: str) -> MLSSLocation:
     region.locations.append(loc)
 
 
-def get_location_data(submodule: str):
+def get_location_data():
     """Helper generator which yields each line of the location files."""
     location_files = ['AllAddresses', 'BrosItems', 'KeyItems', 'Shops', 'Espresso', 'Pants', 'Badges']
     for fname in location_files:
-        path = os.path.join(submodule, 'items', f'{fname}.txt')
+        path = get_submodule_file('items', fname)
         with open(path, 'r') as f:
             yield f.readline()
 
 
-def build_locations(region: Region, submodule: str) -> None:
-    for dt in get_location_data(submodule):
+def build_locations(region: Region) -> None:
+    for dt in get_location_data():
         add_location(region, dt)
 
 
 @lru_cache(maxsize=1)
-def make_location_name_to_id(submodule: str):
+def make_location_name_to_id():
     location_name_to_id = {}
-    for dt in get_location_data(submodule):
+    for dt in get_location_data():
         data = dt.split(',')
         name = get_location_name(data[0])
         address = id_offset + int(data[0], base=16)
