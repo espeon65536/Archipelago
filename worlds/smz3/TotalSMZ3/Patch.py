@@ -352,6 +352,26 @@ class Patch:
             
             return value.value
         else:
+            if location.APLocation.item.game == "Ocarina of Time":
+                item_name = location.APLocation.item.name
+                if "Small Key" in item_name:
+                    return ItemType.Key.value
+                elif "Boss Key" in item_name:
+                    return ItemType.BigKey.value
+                elif "Map" in item_name:
+                    return ItemType.Map.value
+                elif "Compass" in item_name:
+                    return ItemType.Compass.value
+            elif location.APLocation.item.game == "A Link to the Past":
+                item = location.APLocation.item
+                if item.smallkey:
+                    return ItemType.Key.value
+                elif item.bigkey:
+                    return ItemType.BigKey.value
+                elif item.map:
+                    return ItemType.Map.value
+                elif item.compass:
+                    return ItemType.Compass.value
             return ItemType.Something.value
 
     def ItemTablePatch(self, location: Location, itemId: int):

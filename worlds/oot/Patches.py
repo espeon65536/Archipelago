@@ -2434,6 +2434,34 @@ override_struct = struct.Struct('>BBHHBB') # match override_t in get_items.c
 def get_override_table_bytes(override_table):
     return b''.join(sorted(itertools.starmap(override_struct.pack, override_table)))
 
+def get_nonnative_item_id(item):
+    if item.game == 'A Link to the Past':
+        if item.bigkey:
+            return 0x3F
+        elif item.compass:
+            return 0x40
+        elif item.map:
+            return 0x41
+        elif item.smallkey:
+            return 0x42
+    elif item.game == 'SMZ3':
+        smz3_item = item.item
+        if smz3_item.IsBigKey():
+            return 0x3F
+        elif smz3_item.IsCompass():
+            return 0x40
+        elif smz3_item.IsMap() or smz3_item.IsSmMap():
+            return 0x41
+        elif smz3_item.IsKey():
+            return 0x42
+        elif smz3_item.IsKeycard():
+            if 'Boss' in item.name:
+                return 0x3F
+            return 0x42
+
+    if item.advancement:
+        return AP_PROGRESSION
+    return AP_JUNK
 
 def get_override_entry(ootworld, location):
     # Don't add freestanding items, pots/crates, beehives to the override table if they're disabled. We use this check to determine how to draw and interact with them
@@ -2445,10 +2473,11 @@ def get_override_entry(ootworld, location):
     player_id = 0 if ootworld.player == location.item.player else min(location.item.player, 255)
     if location.item.game != 'Ocarina of Time': 
         # This is an AP sendable. It's guaranteed to not be None. 
-        if location.item.advancement:
-            item_id = AP_PROGRESSION
-        else:
-            item_id = AP_JUNK
+        item_id = get_nonnative_item_id(location.item)
+        # if location.item.advancement:
+        #     item_id = AP_PROGRESSION
+        # else:
+        #     item_id = AP_JUNK
     else: 
         item_id = location.item.index
         if None in [scene, default, item_id]:
@@ -2738,7 +2767,7 @@ def place_shop_items(rom, world, shop_items, messages, locations, init_shop_id=F
                 else:
                     rom_item = read_rom_item(rom, item_display.index)
             else:
-                display_index = AP_PROGRESSION if location.item.advancement else AP_JUNK
+                display_index = get_nonnative_item_id(item_display)
                 rom_item = read_rom_item(rom, display_index)
 
             shop_objs.add(rom_item['object_id'])
